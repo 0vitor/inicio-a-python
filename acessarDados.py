@@ -44,7 +44,7 @@ def dadosExtra(year, medal, sex):
       if (atleta['Year'] == year and atleta['Medal'] == medal and atleta['Sex'] == sex):
         result.append((atleta['ID'],atleta['Sport']))
   return result
-
+  
 def listaEventos():
   result = []
   with open('./dados/athlete_events.csv') as csvfile:
