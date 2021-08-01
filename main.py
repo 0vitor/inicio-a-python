@@ -1,10 +1,10 @@
 import time
 import timeit
-import linhas
-import barras
-import textual
-import boxplot
-import extra
+from filtroDeDados import linhas
+from filtroDeDados import barras
+from filtroDeDados import textual
+from filtroDeDados import boxplot
+from filtroDeDados import extra
 import acessarDados as data
 
 def interface():
@@ -27,7 +27,7 @@ def interface():
         if tipoDeOlimpia == 'Summer' or tipoDeOlimpia == 'Winter':
           olimpiadas = data.listaJogos()
           if ano + ' ' + tipoDeOlimpia in olimpiadas:
-            barras.apresentarGraficoDeBarras(ano, tipoDeOlimpia, espotes)
+            barras.presentLineGraph(ano, tipoDeOlimpia, espotes)
           else:
             print('erro: Tipo de Olimpiada invalido para o ano requisitado')
         else:

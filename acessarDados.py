@@ -11,7 +11,7 @@ def dadosGraficoLinhas(genero):
 
 def dadosGraficoBarras(ano, tipoOlimpiada):
   result = []
-  with open('./dados/athlete_events.csv') as csvfile:
+  with open('./baseDeDados/athlete_events.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for atleta in reader:
       if atleta['Year'] == ano and atleta['Season'] == tipoOlimpiada:
@@ -20,7 +20,7 @@ def dadosGraficoBarras(ano, tipoOlimpiada):
 
 def dadosGraficoBoxplot(evento,tipoDeOlimpia):
   result = []
-  with open('./dados/athlete_events.csv') as csvfile:
+  with open('./baseDeDados/athlete_events.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for atleta in reader:
       if atleta['Event'] == evento and atleta['Season'] == tipoDeOlimpia:
@@ -29,7 +29,7 @@ def dadosGraficoBoxplot(evento,tipoDeOlimpia):
 
 def dadosTextual(tipoMedalha):
   result = []
-  with open('./dados/athlete_events.csv') as csvfile:
+  with open('./baseDeDados/athlete_events.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for atleta in reader:
       if atleta['Medal'] == tipoMedalha:
@@ -38,7 +38,7 @@ def dadosTextual(tipoMedalha):
 
 def dadosExtra(year, medal, sex):
   result = []
-  with open('./dados/athlete_events.csv') as csvfile:
+  with open('./baseDeDados/athlete_events.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for atleta in reader:
       if (atleta['Year'] == year and atleta['Medal'] == medal and atleta['Sex'] == sex):
@@ -47,7 +47,7 @@ def dadosExtra(year, medal, sex):
   
 def listaEventos():
   result = []
-  with open('./dados/athlete_events.csv') as csvfile:
+  with open('./dabaseDeDadosdos/athlete_events.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for atleta in reader:
       if atleta['Event'] not in result:
@@ -56,7 +56,7 @@ def listaEventos():
 
 def listaAnos():
   result = []
-  with open('./dados/athlete_events.csv') as csvfile:
+  with open('./baseDeDados/athlete_events.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for atleta in reader:
       if atleta['Year'] not in result:
@@ -65,7 +65,7 @@ def listaAnos():
 
 def listaEsportes():
   result = []
-  with open('./dados/athlete_events.csv') as csvfile:
+  with open('./baseDeDados/athlete_events.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for atleta in reader:
       if atleta['Sport'] not in result:
@@ -74,7 +74,7 @@ def listaEsportes():
 
 def listaJogos():
   result = []
-  with open('./dados/athlete_events.csv') as csvfile:
+  with open('./baseDeDados/athlete_events.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for atleta in reader:
       if atleta['Games'] not in result:
@@ -83,7 +83,7 @@ def listaJogos():
 
 def listaTemporadaEvento():
   result = []
-  with open('./dados/athlete_events.csv') as csvfile:
+  with open('./baseDeDados/athlete_events.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for atleta in reader:
       if (atleta['Season'],atleta['Event']) not in result:
